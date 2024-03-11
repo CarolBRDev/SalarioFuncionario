@@ -26,9 +26,9 @@ namespace SalarioFuncionario
             Console.WriteLine("Digite a porcentagem de aumento do salario bruto: ");
             double aumento = double.Parse(Console.ReadLine());
 
-            double novoSalBruto = salarioBruto + (salarioBruto * (aumento / 100));
+            salarioBruto = salarioBruto + (salarioBruto * (aumento / 100));
 
-            salarioLiquido = novoSalBruto - (novoSalBruto * (imposto / 100));
+            salarioLiquido = salarioBruto - (salarioBruto * (imposto / 100));
 
             Console.WriteLine();
             Console.WriteLine($"Nome do funcionario : {nomeFuncionario}\nSalário Liquido: R${salarioLiquido:F2}");
